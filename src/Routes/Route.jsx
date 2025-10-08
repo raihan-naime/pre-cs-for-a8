@@ -5,6 +5,7 @@ import Home from "../Pages/Home";
 import Products from "../Pages/Products";
 import ErrorPage from "../Pages/ErrorPage";
 import WishList from "../Pages/WishList";
+import ProductDetails from "../Pages/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,6 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: ()=> fetch('./furnitureData.json'),
         Component: Home,
       },
       {
@@ -25,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/wishlist",
         Component: WishList,
+      },
+      {
+        path: "/productDetails/:id",
+        Component: ProductDetails,
       },
     ],
   },
